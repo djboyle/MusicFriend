@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <EditText
+        android:id="@+id/section_enter_title_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:inputType="textCapWords"
+        android:hint="Enter section title..."
+        android:textColor="@color/colorSectionDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/section_enter_titleTV"
+        app:layout_constraintStart_toEndOf="@+id/section_enter_titleTV"
+        app:layout_constraintTop_toTopOf="@+id/section_enter_titleTV" />
+
+    <TextView
+        android:id="@+id/section_enter_titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Title"
+        android:textColor="@color/colorSectionDefault"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNumBars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/number_bars_prompt"
+        android:textColor="@color/colorSectionDefault"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section_enter_titleTV" />
+
+    <EditText
+        android:id="@+id/editTextNumBars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/colorSectionDefault"
+        android:hint="Enter number..."
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNumBars"
+        app:layout_constraintStart_toEndOf="@+id/textViewNumBars"
+        app:layout_constraintTop_toTopOf="@+id/textViewNumBars" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/colorSectionDefault"
+        android:text="@string/section_desc"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumBars" />
+
+    <EditText
+        android:id="@+id/editTextSectionDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/colorSectionDefault"
+        android:ems="10"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="3"
+        android:hint="Enter a description..."
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textViewSectionColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/colorSectionDefault"
+        android:text="@string/section_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/buttonDoneSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Done"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSectionColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewSectionColor" />
+
+    <Button
+        android:id="@+id/buttonColor"
+        android:layout_width="78dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorSectionDefault"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/buttonDoneSection"
+        app:layout_constraintStart_toEndOf="@+id/textViewSectionColor"
+        app:layout_constraintTop_toTopOf="@+id/buttonDoneSection" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#616161</color>
+    <color name="colorPrimaryDark">#424242</color>
+    <color name="colorPrimaryDarkest">#323435</color>
+    <color name="colorAccent">#ECEFF1</color>
+    <color name="colorSongBoarder">#FFFFFF</color>
+    <color name="colorSectionDefault">#ECEFF1</color>
+    <color name="colorSongDescription">#A0A6AF</color>
+    <color name="colorMainBackground">#616161</color>
+    <color name="colorPrimaryDarkTransparent">#E1323435</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorred">#841111</color>
+    <color name="colorRECred">#961213</color>
+</resources>

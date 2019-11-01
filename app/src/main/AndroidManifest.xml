@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dylbo.musicfriend">
+
+    <!-- Required to act as a custom watch face. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Required for complications to receive complication data and open the provider chooser. -->
+    <uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.SplashScreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SongListActivity"
+            android:label="@string/song_list_activity"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- AddTaskActivity -->
+        <activity
+            android:name=".ui.SongActivity"
+            android:label="@string/app_name" />
+        <!-- AddSectionActivity -->
+        <activity
+            android:name=".ui.AddSectionActivity"
+            android:label="@string/add_section_activity_name" />
+        <!-- PlaySongActivity -->
+        <activity
+            android:name=".ui.PlaySongActivity"
+            android:label="@string/app_name" />
+        <!-- AudioRecordTest -->
+        <activity
+            android:name=".Utils.AudioRecordTest"
+            android:label="@string/app_name" />
+    </application>
+
+</manifest>

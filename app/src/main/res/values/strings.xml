@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BandMate</string>
+    <string name="song_list_activity">Song List</string>
+    <string name="main_activity_name">All Tasks</string>
+    <string name="add_section">New Section</string>
+    <string name="add_section_activity_name">Add Section</string>
+    <string name="number_bars_prompt">Bars</string>
+    <string name="section_desc">Description</string>
+    <string name="section_color">Color</string>
+    <string name="action_BPM">BPM</string>
+    <string name="dummy_section_add">ADD SECTION</string>
+    <string name="date_create_label">Created: </string>
+    <string name="menu_play_record">Session Mode</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+</resources>

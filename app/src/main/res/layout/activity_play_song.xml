@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This fragment shows the songs sections in play mode-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDarkest">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/replay_all_FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorSectionDefault"
+        app:layout_constraintBottom_toTopOf="@+id/play_session_FAB"
+        app:layout_constraintEnd_toEndOf="@+id/play_session_FAB"
+        app:layout_constraintStart_toStartOf="@+id/play_session_FAB"
+        app:rippleColor="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_action_replay_start" />
+
+    <TextView
+        android:id="@+id/playing_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Playing"
+        android:textColor="@color/colorSongDescription"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/playing_section_container_FL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+
+    <FrameLayout
+        android:id="@+id/playing_section_container_FL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/nextTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playing_TV"
+        app:layout_constraintVertical_weight="2" />
+
+    <TextView
+        android:id="@+id/nextTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Next"
+        android:textColor="@color/colorSongDescription"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/next_section_container_FL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playing_section_container_FL" />
+
+    <FrameLayout
+        android:id="@+id/next_section_container_FL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/upcomingTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextTV"
+        app:layout_constraintVertical_weight="2" />
+
+    <TextView
+        android:id="@+id/upcomingTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Upcoming"
+        android:textColor="@color/colorSongDescription"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/upcoming_section_1_container_FL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_section_container_FL" />
+
+
+    <FrameLayout
+        android:id="@+id/upcoming_section_1_container_FL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/upcoming_section_2_container_FL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcomingTV"
+        app:layout_constraintVertical_weight="1">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/upcoming_section_2_container_FL"
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_song_banner_play_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcoming_section_1_container_FL"
+        app:layout_constraintVertical_weight="1">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/bottom_song_banner_play_IV"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/music_note_play_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_music_note"
+        android:paddingLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bottom_song_banner_IV"
+        app:layout_constraintTop_toTopOf="@+id/bottom_song_banner_play_IV" />
+
+    <TextView
+        android:id="@+id/song_title_play_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Title"
+        android:textColor="@color/colorSectionDefault"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/music_note_play_IV"
+        app:layout_constraintStart_toEndOf="@+id/music_note_play_IV"
+        app:layout_constraintTop_toTopOf="@+id/music_note_play_IV" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/play_session_FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_song_banner_play_IV"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_song_banner_play_IV"
+        app:layout_constraintTop_toTopOf="@+id/bottom_song_banner_play_IV"
+        app:srcCompat="@drawable/ic_action_play" />
+
+</android.support.constraint.ConstraintLayout>

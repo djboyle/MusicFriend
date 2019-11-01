@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Media_Player_IV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_recordings_list"
+        app:layout_constraintVertical_weight="1"
+        app:srcCompat="@color/colorPrimaryDarkest" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recordings_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/Media_Player_IV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="5">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <SeekBar
+        android:id="@+id/recording_play_SB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Media_Player_IV" />
+
+    <ImageView
+        android:id="@+id/recording_screen_IV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_recordings_list"
+        app:layout_constraintEnd_toEndOf="@+id/rv_recordings_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_recordings_list"
+        app:srcCompat="@color/colorPrimaryDarkTransparent" />
+
+    <TextView
+        android:id="@+id/quickRecordingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quick Recording"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/recording_chronometer"
+        app:layout_constraintEnd_toEndOf="@+id/recording_chronometer"
+        app:layout_constraintStart_toStartOf="@+id/recording_chronometer" />
+
+    <ImageButton
+        android:id="@+id/play_pause_rec_IB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDarkest"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/Media_Player_IV"
+        app:layout_constraintEnd_toEndOf="@+id/Media_Player_IV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recording_play_SB"
+        app:srcCompat="@drawable/ic_play_full_circle" />
+
+    <TextView
+        android:id="@+id/REC_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REC"
+        android:textColor="@color/colorSongDescription"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rec_stop_IB"
+        app:layout_constraintEnd_toEndOf="@+id/rec_stop_IB"
+        app:layout_constraintStart_toStartOf="@+id/rec_stop_IB" />
+
+    <ImageButton
+        android:id="@+id/next_IB"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorPrimaryDarkest"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/play_pause_rec_IB"
+        app:layout_constraintStart_toEndOf="@+id/play_pause_rec_IB"
+        app:layout_constraintTop_toTopOf="@+id/play_pause_rec_IB"
+        app:srcCompat="@drawable/ic_action_next" />
+
+    <ImageButton
+        android:id="@+id/previous_IB"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimaryDarkest"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/play_pause_rec_IB"
+        app:layout_constraintEnd_toStartOf="@+id/play_pause_rec_IB"
+        app:layout_constraintTop_toTopOf="@+id/play_pause_rec_IB"
+        app:srcCompat="@drawable/ic_action_back" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/REC_enable_FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorred"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Media_Player_IV"
+        app:layout_constraintTop_toBottomOf="@+id/recording_play_SB"
+        app:srcCompat="@drawable/ic_action_record" />
+
+    <ImageButton
+        android:id="@+id/rec_stop_IB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDarkest"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/previous_IB"
+        app:layout_constraintEnd_toEndOf="@+id/play_pause_rec_IB"
+        app:layout_constraintStart_toStartOf="@+id/play_pause_rec_IB"
+        app:layout_constraintTop_toTopOf="@+id/previous_IB"
+        app:srcCompat="@drawable/ic_action_rec" />
+
+    <Chronometer
+        android:id="@+id/recording_chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:textColor="@color/colorAccent"
+        android:textSize="70sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_recordings_list"
+        app:layout_constraintEnd_toEndOf="@+id/rv_recordings_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

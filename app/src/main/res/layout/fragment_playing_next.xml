@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_playing_next"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/section_title_PN_TV"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:padding="8dp"
+        android:text="Title"
+        android:textColor="@color/colorSectionDefault"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/side_color_bar_PN_IV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/section_bars_PN_TV"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        android:text="X Bars"
+        android:textColor="@color/colorSongDescription"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/section_title_PN_TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/section_title_PN_TV" />
+
+    <ProgressBar
+        android:id="@+id/section_progress_PN_PB"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:max="100"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/side_color_bar_PN_IV"
+        app:layout_constraintTop_toBottomOf="@+id/section_title_PN_TV" />
+
+    <ImageView
+        android:id="@+id/side_color_bar_PN_IV"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/section_description_PN_TV"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="top|left"
+        android:text="Description"
+        android:textColor="@color/colorSectionDefault"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/side_color_bar_PN_IV"
+        app:layout_constraintTop_toBottomOf="@+id/section_progress_PN_PB" />
+</android.support.constraint.ConstraintLayout>

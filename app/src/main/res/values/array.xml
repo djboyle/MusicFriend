@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="testArray">
+        <item>Record Audio</item>
+        <item>Playback Audio</item>
+        <item>Metronome Only</item>
+    </string-array>
+</resources>

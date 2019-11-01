@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--COMPLETED (2) Create a menu resource in res/menu/ called forecast.xml-->
+<!-- The menu found in the main multi-day forecast  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.PlaySongActivity">
+    <!--COMPLETED (3) Add one item to the menu with an ID of action_refresh-->
+    <!--COMPLETED (4) Set the title of the menu item to "Refresh" using strings.xml-->
+    <item
+        android:id="@+id/action_play_record_settings"
+        android:orderInCategory="1"
+        android:title="@string/menu_play_record"
+        app:showAsAction="never"/>
+</menu>
